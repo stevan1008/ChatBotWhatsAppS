@@ -1,0 +1,34 @@
+2022/03/17-16:52:16.656 dd8 Reusing MANIFEST C:\Users\desarrollador1\Documents\clone  chatBot from GitHub\WhatsAppBot\.wwebjs_auth\session-aism1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/03/17-16:52:16.657 dd8 Recovering log #1153
+2022/03/17-16:52:16.712 dd8 Reusing old log C:\Users\desarrollador1\Documents\clone  chatBot from GitHub\WhatsAppBot\.wwebjs_auth\session-aism1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001153.log 
+2022/03/17-16:52:54.090 3964 Level-0 table #1176: started
+2022/03/17-16:52:54.225 3964 Level-0 table #1176: 1283780 bytes OK
+2022/03/17-16:52:54.259 3964 Delete type=0 #1153
+2022/03/17-16:52:54.842 dd8 Compacting 1@0 + 0@1 files
+2022/03/17-16:52:54.921 dd8 Generated table #1177@0: 18565 keys, 458899 bytes
+2022/03/17-16:52:54.939 dd8 Generated table #1178@0: 789 keys, 20659 bytes
+2022/03/17-16:52:54.939 dd8 Compacted 1@0 + 0@1 files => 479558 bytes
+2022/03/17-16:52:54.962 dd8 compacted to: files[ 0 2 25 0 0 0 0 ]
+2022/03/17-16:52:54.963 dd8 Delete type=2 #1176
+2022/03/17-16:53:00.516 dd8 Compacting 1@1 + 9@2 files
+2022/03/17-16:53:00.689 dd8 Generated table #1179@1: 31774 keys, 2245624 bytes
+2022/03/17-16:53:00.834 dd8 Generated table #1180@1: 52185 keys, 2269262 bytes
+2022/03/17-16:53:00.975 dd8 Generated table #1181@1: 15980 keys, 2229164 bytes
+2022/03/17-16:53:01.151 dd8 Generated table #1182@1: 3996 keys, 2154932 bytes
+2022/03/17-16:53:01.307 dd8 Generated table #1183@1: 2759 keys, 2143012 bytes
+2022/03/17-16:53:01.462 dd8 Generated table #1184@1: 4483 keys, 2155590 bytes
+2022/03/17-16:53:01.607 dd8 Generated table #1185@1: 16864 keys, 2170947 bytes
+2022/03/17-16:53:01.779 dd8 Generated table #1186@1: 32352 keys, 2254557 bytes
+2022/03/17-16:53:01.931 dd8 Generated table #1187@1: 28855 keys, 2162912 bytes
+2022/03/17-16:53:01.931 dd8 Compacted 1@1 + 9@2 files => 19786000 bytes
+2022/03/17-16:53:01.979 dd8 compacted to: files[ 0 1 25 0 0 0 0 ]
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1157
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1158
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1159
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1160
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1161
+2022/03/17-16:53:01.979 dd8 Delete type=2 #1162
+2022/03/17-16:53:01.980 dd8 Delete type=2 #1163
+2022/03/17-16:53:01.980 dd8 Delete type=2 #1164
+2022/03/17-16:53:01.980 dd8 Delete type=2 #1165
+2022/03/17-16:53:01.980 dd8 Delete type=2 #1177
