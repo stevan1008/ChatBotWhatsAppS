@@ -5,10 +5,12 @@ const cors = require('cors');
 const { Client, LocalAuth, NoAuth } = require('whatsapp-web.js');
 const fs = require('fs');
 const { fcb } = require('./funciones-chatBot3_1');
+const { authGuard } = require('./middlewares/api_guard');
 
 var qrToken = undefined;
 var auth = false;
 var ready = false;
+var phoneNumber = undefined;
 
 const client = new Client({
     //authStrategy: new LocalAuth({ clientId: "aism-one" })
@@ -19,9 +21,7 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
-server.use('/api/chatbot/startChatbot', function(req, res) {
-    console.log('@@@@ ' + ready);
-
+server.use('/api/chatbot/startChatbot', authGuard, function(req, res) {
     if (!ready) {
         client.initialize();
     }
@@ -29,8 +29,30 @@ server.use('/api/chatbot/startChatbot', function(req, res) {
     res.json({ res: 'Client started!' }); 
 });
 
-server.use('/api/chatbot/token', function(req, res) {
+server.use('/api/chatbot/token', authGuard, function(req, res) {    
     res.json({ token: qrToken, botReady: ready, authenticated: auth }); 
+});
+
+server.use('/api/chatbot/logout', authGuard, (req, res) => {
+    qrToken = undefined;
+    auth = false;
+    ready = false;
+    auth = false;
+    client.destroy();
+    console.log('Client destroyed');
+    res.json({ res: 'Logout!' });
+});
+
+server.use('/api/chatbot/ready', authGuard, (req, res) => {
+    res.json({ ready: ready });
+});
+
+server.use('/api/chatbot/phone', authGuard, (req, res) => {
+    if (ready) {
+        res.json({ phoneNumber: client.info.wid.user });
+    } else {
+        res.json({msg: 'Número no encontrado'});
+    }
 });
 
 const port = process.env.port || 3000;
@@ -72,8 +94,8 @@ client.on('ready', async () => {
 });
 
 client.on('message', msg => {
-    let message = msg;
     let phoneNumber = msg._data.from.split('@')[0];
+    let message = msg;
     let user = null;
 
     console.log('\n\n\n\n');
